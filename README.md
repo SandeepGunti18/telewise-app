@@ -28,11 +28,11 @@ Cloudflare Tunnel
 
 ## Running locally
 
-'''
+```
 npm install
 
 npm run dev
-'''
+```
 
 Press `p` when prompted to open the app in your browser.
 
