@@ -1,3 +1,42 @@
+# Telewise Shopify App
+
+A custom Shopify app that automates SMS notifications for order and refund events. 
+Built as part of an internship project at Telewise Technologies.
+
+## What it does
+
+- Listens for Shopify's `orders/create` and `refunds/create` webhooks, verifies each 
+  request's HMAC signature, and stores the event data via Prisma.
+- Renders a templated SMS message using the order/refund data and sends the 
+  notification.
+- Includes an in-app **SMS Template Manager** (built with Shopify Polaris) where 
+  templates for both order and refund messages can be edited, previewed, and 
+  activated — no code changes needed to update the wording.
+- Keeps a log of every notification attempt (`NotificationLog`) for traceability.
+
+## My role
+
+Team member — responsible for the `refunds/create` webhook, the 
+Prisma schema and migrations, the SMS Template Manager UI and its backend 
+integration, overall DevOps setup (Shopify CLI, Cloudflare Tunnel), and repository 
+management. Part of a 5-member team.
+
+## Tech stack
+
+Remix + React · Shopify Polaris · Prisma ORM (SQLite) · Shopify App Bridge · 
+Cloudflare Tunnel
+
+## Running locally
+
+'''
+npm install
+npm run dev
+'''
+
+Press `p` when prompted to open the app in your browser.
+
+---
+
 # Shopify App Template - React Router
 
 This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using [React Router](https://reactrouter.com/). It was forked from the [Shopify Remix app template](https://github.com/Shopify/shopify-app-template-remix) and converted to React Router.
